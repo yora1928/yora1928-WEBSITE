@@ -1,0 +1,143 @@
+/* yora1928.my.id
+   Satu kolom, gaya dokumen teknis. Tanpa JavaScript. */
+
+:root{
+  --bg:#F7F8FA;
+  --ink:#12161C;
+  --muted:#566170;
+  --rule:#D9DEE5;
+  --link:#0B57D0;
+  --mark:#B3400A;
+
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"Cascadia Mono","SF Mono",Consolas,Menlo,monospace;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0F1318;
+    --ink:#E8EBF0;
+    --muted:#98A2B0;
+    --rule:#262D38;
+    --link:#8AB4FF;
+    --mark:#F0925F;
+  }
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:1.0625rem/1.7 var(--sans);
+  text-rendering:optimizeLegibility;
+}
+
+.col{ max-width:44rem; margin-inline:auto; padding-inline:1.25rem; }
+
+a{ color:var(--link); text-underline-offset:0.18em; text-decoration-thickness:1px; }
+a:hover{ text-decoration-thickness:2px; }
+a:focus-visible{ outline:2px solid var(--link); outline-offset:3px; border-radius:2px; }
+
+p{ margin:0 0 1rem; max-width:62ch; }
+
+h1,h2,h3{ margin:0; font-weight:700; }
+h2{ font:700 1.6rem/1.25 var(--serif); margin-bottom:0.75rem; }
+h3{ font:700 1.05rem/1.4 var(--sans); margin-bottom:0.25rem; }
+
+section{ padding-top:3.25rem; scroll-margin-top:1rem; }
+
+.skip{
+  position:absolute; left:-999px; top:0;
+  background:var(--ink); color:var(--bg); padding:0.6rem 1rem; z-index:10;
+}
+.skip:focus{ left:0.75rem; top:0.75rem; }
+
+/* ---------- Masthead ---------- */
+.masthead{ border-bottom:1px solid var(--rule); }
+.masthead-row{
+  display:flex; flex-wrap:wrap; align-items:baseline;
+  justify-content:space-between; gap:0.4rem 1.5rem; padding-block:0.9rem;
+}
+.site{
+  font:600 0.95rem var(--mono); color:var(--ink); text-decoration:none;
+}
+.site:hover{ color:var(--link); }
+.masthead ul{ display:flex; flex-wrap:wrap; gap:0.25rem 1.25rem; list-style:none; margin:0; padding:0; }
+.masthead nav a{ color:var(--muted); font-size:0.95rem; text-decoration:none; }
+.masthead nav a:hover{ color:var(--link); text-decoration:underline; }
+
+/* ---------- Intro ---------- */
+.intro{ padding-top:3.5rem; }
+h1{
+  font:700 clamp(3.25rem, 11vw, 6rem)/0.95 var(--serif);
+  letter-spacing:-0.02em;
+  margin-bottom:1.25rem;
+}
+.lead{ font-size:1.25rem; line-height:1.55; max-width:36rem; margin-bottom:0; }
+
+.record{ margin:2.25rem 0 0; }
+.record > div{
+  display:grid; grid-template-columns:8.5rem 1fr; gap:1rem;
+  padding:0.65rem 0; border-top:1px solid var(--rule);
+}
+.record > div:last-child{ border-bottom:1px solid var(--rule); }
+.record dt{ font:500 0.82rem/1.9 var(--mono); color:var(--muted); }
+.record dd{ margin:0; }
+
+/* ---------- Laporan ---------- */
+.log{ list-style:none; margin:1.5rem 0 1.25rem; padding:0; }
+.log li{
+  display:grid; grid-template-columns:8.5rem 1fr; gap:1rem;
+  padding:1rem 0; border-top:1px solid var(--rule);
+}
+.log li:last-child{ border-bottom:1px solid var(--rule); }
+.when{ font:500 0.85rem/1.9 var(--mono); color:var(--muted); margin:0; }
+.log p:not(.when){ margin-bottom:0; }
+
+/* ---------- Proyek ---------- */
+.repos{ list-style:none; margin:1.5rem 0 1.25rem; padding:0; }
+.repos li{ padding:1.1rem 0; border-top:1px solid var(--rule); }
+.repos li:last-child{ border-bottom:1px solid var(--rule); }
+.repos h3{ font:700 1.2rem/1.35 var(--serif); }
+.lang{ font:500 0.8rem var(--mono); color:var(--muted); margin-bottom:0.5rem; }
+.repos li > p:last-child{ margin-bottom:0; }
+
+/* ---------- Aturan ---------- */
+.rule{ border-left:4px solid var(--mark); padding-left:1.25rem; margin-top:1.25rem; }
+.rule p:last-child{ margin-bottom:0; }
+
+/* ---------- Kontak ---------- */
+.links{ list-style:none; margin:0; padding:0; }
+.links li{ padding:0.35rem 0; }
+
+/* ---------- Footer ---------- */
+.foot{ margin-top:4.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:0.9rem; }
+.foot-row{
+  display:flex; flex-wrap:wrap; justify-content:space-between;
+  gap:0.5rem 1.5rem; padding-block:1.5rem 2.5rem;
+}
+.foot p{ margin:0; }
+.foot a{ color:var(--muted); }
+.foot a:hover{ color:var(--link); }
+
+/* ---------- Layar kecil ---------- */
+@media (max-width:560px){
+  .record > div, .log li{ grid-template-columns:1fr; gap:0; }
+  .record dt, .when{ line-height:1.6; }
+  .lead{ font-size:1.15rem; }
+}
+
+/* ---------- Cetak (untuk yang mencetak portofolio) ---------- */
+@media print{
+  :root{ --bg:#fff; --ink:#000; --muted:#333; --rule:#bbb; --link:#000; --mark:#000; }
+  .masthead nav, .skip, .foot a{ display:none; }
+  a{ text-decoration:none; }
+  a[href^="http"]::after{ content:" (" attr(href) ")"; font-size:0.8em; color:#333; }
+  section{ break-inside:avoid; }
+}

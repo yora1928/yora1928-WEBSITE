@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>YORA (yora1928): jaringan komputer dan keamanan siber</title>
+  <meta name="description" content="Situs pribadi YORA (yora1928), pelajar yang belajar jaringan komputer dan keamanan siber: laporan kerentanan, proyek GitHub, dan aturan etika risetnya.">
+  <meta name="author" content="YORA">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://yora1928.my.id/">
+  <link rel="alternate" hreflang="id" href="https://yora1928.my.id/">
+  <link rel="alternate" hreflang="x-default" href="https://yora1928.my.id/">
+  <link rel="me" href="https://github.com/yora1928">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F7F8FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1318" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Verifikasi Google Search Console (metode tag HTML). Buka komentar ini dan isi kodenya jika kamu memilih metode ini.
+  <meta name="google-site-verification" content="ISI_KODE_DARI_GOOGLE_SEARCH_CONSOLE">
+  -->
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="YORA (yora1928)">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="YORA (yora1928): jaringan komputer dan keamanan siber">
+  <meta property="og:description" content="Pelajar yang belajar jaringan komputer dan keamanan siber. Laporan kerentanan, proyek GitHub, dan aturan etika riset.">
+  <meta property="og:url" content="https://yora1928.my.id/">
+  <meta property="og:image" content="https://yora1928.my.id/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="YORA, yora1928.my.id, jaringan komputer dan keamanan siber">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="YORA (yora1928): jaringan komputer dan keamanan siber">
+  <meta name="twitter:description" content="Pelajar yang belajar jaringan komputer dan keamanan siber.">
+  <meta name="twitter:image" content="https://yora1928.my.id/assets/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://yora1928.my.id/#website",
+        "url": "https://yora1928.my.id/",
+        "name": "YORA (yora1928)",
+        "inLanguage": "id",
+        "publisher": { "@id": "https://yora1928.my.id/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://yora1928.my.id/#profilepage",
+        "url": "https://yora1928.my.id/",
+        "name": "YORA (yora1928): jaringan komputer dan keamanan siber",
+        "inLanguage": "id",
+        "dateModified": "2026-09-20",
+        "isPartOf": { "@id": "https://yora1928.my.id/#website" },
+        "mainEntity": { "@id": "https://yora1928.my.id/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://yora1928.my.id/#person",
+        "name": "YORA",
+        "alternateName": "yora1928",
+        "url": "https://yora1928.my.id/",
+        "sameAs": ["https://github.com/yora1928"],
+        "description": "Pelajar yang mendalami jaringan komputer, keamanan siber, Linux, dan administrasi server.",
+        "knowsAbout": ["Jaringan komputer", "Keamanan siber", "Linux", "Administrasi server", "Pelaporan kerentanan yang bertanggung jawab"]
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pemeriksa pasif SP Page Builder (Joomla)",
+        "codeRepository": "https://github.com/yora1928/CVE-2026-48908-by-yora",
+        "programmingLanguage": "Python",
+        "author": { "@id": "https://yora1928.my.id/#person" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scanner plugin Forminator (WordPress)",
+        "codeRepository": "https://github.com/yora1928/cve-2026-15748",
+        "programmingLanguage": "Python",
+        "author": { "@id": "https://yora1928.my.id/#person" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Riset keamanan PaperCut NG/MF",
+        "codeRepository": "https://github.com/yora1928/PaperCut-CVE-2026-81578-82078",
+        "programmingLanguage": "Python",
+        "author": { "@id": "https://yora1928.my.id/#person" }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#isi">Lewati ke isi halaman</a>
+
+  <header class="masthead">
+    <div class="col masthead-row">
+      <a class="site" href="./">yora1928.my.id</a>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#laporan">Laporan</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#aturan">Aturan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="isi">
+    <div class="col">
+
+      <section class="intro" aria-labelledby="judul">
+        <h1 id="judul">YORA</h1>
+        <p class="lead">Pelajar yang belajar jaringan komputer dan keamanan siber. Saya menguji sistem di lab sendiri, melaporkan celah yang saya temukan ke pemiliknya, dan menyimpan catatannya di GitHub.</p>
+
+        <dl class="record">
+          <div><dt>Panggilan</dt><dd>YORA</dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/yora1928" rel="me noopener noreferrer" target="_blank">github.com/yora1928</a></dd></div>
+          <div><dt>Bidang</dt><dd>Jaringan komputer, keamanan siber, Linux, administrasi server</dd></div>
+          <div><dt>Fokus riset</dt><dd>Kerentanan (CVE), proof of concept, dan eksekusi kode jarak jauh (RCE)</dd></div>
+          <div><dt>Alat harian</dt><dd>Nmap, Wireshark, curl, Nikto, Git</dd></div>
+          <div><dt>Aturan</dt><dd>Hanya untuk pengujian yang berizin dan bertanggung jawab</dd></div>
+          <div><dt>Tercatat</dt><dd>3 pengakuan tertulis dan 6 dokumen, semuanya 2026</dd></div>
+        </dl>
+      </section>
+
+      <section id="tentang" aria-labelledby="h-tentang">
+        <h2 id="h-tentang">Tentang</h2>
+        <p>Saya pelajar yang tertarik pada teknologi informasi, terutama jaringan komputer, keamanan siber, Linux, dan administrasi server. Sebagian besar yang saya tahu datang dari praktik: membuat lab sendiri, mencoba, lalu menulis apa yang terjadi.</p>
+        <p>Saya tidak berusaha menguasai semuanya sekaligus. Saya memahami satu topik dulu, baru pindah ke berikutnya. Alurnya sederhana: pelajari, bangun, uji, catat, perbaiki, lalu ulangi.</p>
+        <p>Di profil GitHub, tumpukan teknologi yang saya pakai adalah Linux dan Ubuntu, Bash, Python, Git, Docker, dan Cisco. Topik yang sedang saya dalami sekarang adalah keamanan jaringan, administrasi Linux, pengelolaan server, dan Git.</p>
+      </section>
+
+      <section id="laporan" aria-labelledby="h-laporan">
+        <h2 id="h-laporan">Laporan kerentanan yang sudah diakui</h2>
+        <p>Tiga temuan saya pada 2026 mendapat pengakuan tertulis dari institusi yang saya laporkan. Detail teknisnya sengaja tidak saya tulis di sini.</p>
+
+        <ol class="log">
+          <li>
+            <p class="when"><time datetime="2026-06-05">5 Juni 2026</time></p>
+            <div>
+              <h3>SMK Negeri 1 Jogonalan (JOGSA Content Creator)</h3>
+              <p>Berkontribusi pada penemuan dan pelaporan celah keamanan di situs perpustakaan sekolah secara bertanggung jawab.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when"><time datetime="2026-05-16">16 Mei 2026</time></p>
+            <div>
+              <h3>RSU Islam Klaten</h3>
+              <p>Menerima sertifikat apresiasi karena menemukan dan melaporkan celah keamanan web kepada tim terkait.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when"><time datetime="2026">2026</time></p>
+            <div>
+              <h3>SMK Negeri 1 Bukateja</h3>
+              <p>Melaporkan celah keamanan pada fitur unggah berkas di situs Bursa Kerja Khusus (BKK), langsung kepada pihak sekolah.</p>
+            </div>
+          </li>
+        </ol>
+
+        <p>Tiga dokumen lain di arsip berasal dari PT. SYSNETSOFT, RSI Gunungkidul, dan SMK Negeri 10 Malang. Semuanya bisa dilihat di <a href="https://github.com/yora1928/certifications-README.md" target="_blank" rel="noopener noreferrer">repositori sertifikat</a>.</p>
+      </section>
+
+      <section id="proyek" aria-labelledby="h-proyek">
+        <h2 id="h-proyek">Proyek di GitHub</h2>
+        <p>Ini alat pemeriksa dan bahan riset yang saya buat untuk belajar. Pakai hanya pada sistem milik sendiri atau yang sudah memberi izin tertulis.</p>
+
+        <ul class="repos">
+          <li>
+            <h3><a href="https://github.com/yora1928/CVE-2026-48908-by-yora" target="_blank" rel="noopener noreferrer">Pemeriksa pasif SP Page Builder (Joomla)</a></h3>
+            <p class="lang">Python</p>
+            <p>Mengenali komponen SP Page Builder pada situs Joomla, memperkirakan versinya, dan memeriksa apakah fitur unggah terbuka tanpa autentikasi. Terkait CVE-2026-48908. Repositori ini saya sematkan di profil.</p>
+          </li>
+          <li>
+            <h3><a href="https://github.com/yora1928/cve-2026-15748" target="_blank" rel="noopener noreferrer">Scanner plugin Forminator (WordPress)</a></h3>
+            <p class="lang">Python</p>
+            <p>Mengenali instalasi plugin Forminator di situs WordPress dan menilai paparannya berdasarkan versi. Terkait CVE-2026-15748. Untuk edukasi dan pengujian berizin saja.</p>
+          </li>
+          <li>
+            <h3><a href="https://github.com/yora1928/PaperCut-CVE-2026-81578-82078" target="_blank" rel="noopener noreferrer">Riset keamanan PaperCut NG/MF</a></h3>
+            <p class="lang">Python</p>
+            <p>Bahan riset untuk dua kerentanan PaperCut NG/MF, CVE-2026-81578 dan CVE-2026-82078. Berisi alat pemindai dan lab lokal untuk mencoba di lingkungan sendiri.</p>
+          </li>
+          <li>
+            <h3><a href="https://github.com/yora1928/certifications-README.md" target="_blank" rel="noopener noreferrer">Arsip sertifikat dan pengakuan</a></h3>
+            <p class="lang">Dokumentasi</p>
+            <p>Sertifikat dan surat pengakuan saya, disimpan tanpa data sensitif dan tanpa detail yang bisa disalahgunakan.</p>
+          </li>
+        </ul>
+
+        <p>Semua repositori publik ada di <a href="https://github.com/yora1928?tab=repositories" target="_blank" rel="noopener noreferrer">halaman repositori yora1928</a>.</p>
+      </section>
+
+      <section id="aturan" aria-labelledby="h-aturan">
+        <h2 id="h-aturan">Aturan main</h2>
+        <div class="rule">
+          <p>Alat dan riset saya hanya dipakai pada sistem milik sendiri atau yang sudah memberi izin. Itu tidak saya tawar.</p>
+          <p>Kalau saya menemukan celah di sistem orang lain, saya laporkan ke pemiliknya lewat pelaporan yang bertanggung jawab (responsible disclosure). Data sensitif, kredensial, dan detail yang bisa langsung disalahgunakan tidak saya publikasikan.</p>
+        </div>
+      </section>
+
+      <section id="kontak" aria-labelledby="h-kontak">
+        <h2 id="h-kontak">Kontak</h2>
+        <p>Cara paling cepat menghubungi saya adalah lewat GitHub.</p>
+        <!-- Untuk menampilkan email, tambahkan satu baris <li> di daftar bawah, contoh:
+        <li><a href="mailto:EMAILMU@contoh.com">EMAILMU@contoh.com</a></li>
+        -->
+        <ul class="links">
+          <li><a href="https://github.com/yora1928" rel="me noopener noreferrer" target="_blank">github.com/yora1928</a></li>
+          <li><a href="https://github.com/yora1928?tab=repositories" target="_blank" rel="noopener noreferrer">Semua repositori</a></li>
+          <li><a href="https://github.com/yora1928/certifications-README.md" target="_blank" rel="noopener noreferrer">Arsip sertifikat</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="col foot-row">
+      <p>&copy; 2026 YORA. Situs statis tanpa JavaScript, tanpa pelacak, tanpa iklan.</p>
+      <p><a href="#judul">Ke atas</a></p>
+    </div>
+  </footer>
+</body>
+</html>
